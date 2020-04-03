@@ -7,12 +7,26 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "graphql": "^14.6.0",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.13.0",
+    "@graphql-codegen/typescript": "^1.13.0",
+    "@graphql-codegen/typescript-graphql-files-modules": "^1.13.0",
+    "@graphql-codegen/typescript-operations": "^1.13.0",
+    "@graphql-codegen/typescript-react-apollo": "^1.13.0",
+    "@graphql-codegen/typescript-resolvers": "^1.13.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "gen": "graphql-codegen --config codegen.yml"
   }
 }
